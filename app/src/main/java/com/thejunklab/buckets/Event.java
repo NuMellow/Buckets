@@ -6,16 +6,21 @@ public class Event {
     String memo;
     String bucketId;
     float bucketBalance;
+    String dateCreated;
+    String dateModified;
 
     public Event() {
     }
 
-    public Event(String id, float amount, String memo, String bucketId, float bucketBalance) {
+    public Event(String id, float amount, String memo, String bucketId, float bucketBalance,
+                String dateCreated, String dateModified) {
         this.id = id;
         this.amount = amount;
         this.memo = memo;
         this.bucketId = bucketId;
         this.bucketBalance = bucketBalance;
+        this.dateCreated = dateCreated;
+        this.dateModified = dateModified;
     }
 
     public String getId() {
@@ -56,5 +61,21 @@ public class Event {
 
     public void setBucketBalance(float bucketBalance) {
         this.bucketBalance = bucketBalance;
+    }
+
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public String getDateModified() {
+        return dateModified;
+    }
+
+    public void setDateModified(String dateModified) {
+        this.dateModified = dateModified;
     }
 }
