@@ -8,16 +8,20 @@ public class Bucket {
     float balance;
     boolean isConstant;
     float incomeShare;
+    String dateCreated, dateModified;
 
     public Bucket() {
     }
 
-    public Bucket(String id, String name, float balance, boolean isConstant, float incomeShare) {
+    public Bucket(String id, String name, float balance, boolean isConstant, float incomeShare,
+                  String dateCreated, String dateModified) {
         this.id = id;
         this.name = name;
         this.balance = balance;
         this.isConstant = isConstant;
         this.incomeShare = incomeShare;
+        this.dateCreated = dateCreated;
+        this.dateModified = dateModified;
     }
 
     public String getId() {
@@ -62,5 +66,21 @@ public class Bucket {
 
     public void updateBalance(float amount) {
         setBalance(balance + amount);
+    }
+
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public String getDateModified() {
+        return dateModified;
+    }
+
+    public void setDateModified(String dateModified) {
+        this.dateModified = dateModified;
     }
 }
